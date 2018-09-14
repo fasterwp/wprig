@@ -439,10 +439,9 @@ template {
 
 @media (--sidebar-query) {
 	.has-sidebar .site {
-		margin: 0 1em;
 		display: grid;
-		grid-template-columns: 3fr 1fr;
-		grid-gap: 2rem;
+		grid-template-columns: 1fr;
+		grid-gap: 0;
 		justify-content: center;
 	}
 
@@ -453,6 +452,7 @@ template {
 	.site-main {
 		grid-column: 1;
 		min-width: 0;
+		margin-top: 160px;
 	}
 
 	.primary-sidebar {
@@ -723,6 +723,14 @@ textarea {
 
 .site-header {
 	padding-bottom: 1em;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 20px;
+	justify-content: center;
+	position: fixed;
+	z-index: 9999;
+	background: #fff;
+	box-shadow: 0 0 20px rgba(0,0,0,.05);
 }
 
 .header-image {
@@ -740,12 +748,12 @@ textarea {
 }
 
 .site-branding {
-	text-align: center;
-	padding: 60px 0 1.75em;
+	text-align: left;
+	padding: 20px 0 1.75em;
 }
 
 .site-title {
-	margin: 0 1em;
+	margin: 0 24px;
 	font-family: var(--highlight-font-family);
 	font-size: 38px;
 	font-weight: bold;
@@ -759,7 +767,7 @@ textarea {
 }
 
 .site-description {
-	margin: .4375em 0 0;
+	margin: .4375em 0 0 24px;
 	font-family: var(--highlight-font-family);
 	font-size: 17px;
 	font-weight: inherit;
@@ -886,7 +894,7 @@ textarea {
 	.main-navigation .menu {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-end;
 	}
 
 	.main-navigation .menu-item-has-children,
